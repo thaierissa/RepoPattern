@@ -1,6 +1,8 @@
 <?php
 require_once("IRepository.interface.php");
-abstract class Repository implements IRepository {
+require_once("Queries/IQuery.interface.php");
+
+abstract class Repository implements IRepository  {
     protected static $PDO;
     /**
      * Class constructor
@@ -10,7 +12,10 @@ abstract class Repository implements IRepository {
         if(is_null(self::$PDO)) self::$PDO = $pdo;
     }
 
-   public abstract function Find($obj);
+    protected function Find(IQuery $obj) {
+     if(is_null($obj)) throw new Exception("Invalid input type");
+        return $obj->Find(self::$PDO);
+    }
     
     public function Create($obj) {
 

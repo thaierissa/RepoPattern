@@ -5,5 +5,6 @@ class Models {
     const NULL = 0,
           Account = 1,
           Courses = 2,
-          Classes = 3;
+          Classes = 3,
+          Student = 4;
 }

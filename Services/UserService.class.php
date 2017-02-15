@@ -13,11 +13,14 @@ class UserService implements IUserService {
     }
     public function GetUser($id) {
         if(!is_string($id)) throw new Exception("Invalid input");
-        return $this->_UnitOfWork->Resolve("IAccountRepository")->Get($id);
-
+        return $this->_UnitOfWork->Resolve("IAccountRepository")->GetAccount($id);
+    }
+    public function GetStudentsForAdvisor($id){
+        if(!is_string($id)) throw new Exception("Invalid input");
+        return $this->_UnitOfWork->Resolve("IAccountRepository")->getStudentsForAdvisor($id);
     }
     public function GetAll() {
-        return $this->_UnitOfWork->Resolve("IAccountRepository")->GetAllAccounts();
+        return $this->_UnitOfWork->Resolve("IRepository")->GetAllAccounts();
     }
     public function AddUser(User $user) {
         if($user == null) throw new Exception("Invalid input");

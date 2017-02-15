@@ -11,7 +11,7 @@ class DI {
     public static function RegisterTypes() {
         $container = new Container();
         $container->Register("PDO", new PDO(SQL_TYPE.HOST.SCHEMA, USER, PASS));
-        $container->Register("IUnitOfWork", new UnitOfWork($container->Resolve("PDO"), array("IAccountRepository"=>new AccountRepository($container->Resolve("PDO")))));
+        $container->Register("IUnitOfWork", new UnitOfWork(array("IAccountRepository"=>new AccountRepository( $container->Resolve("PDO")))));
         $container->Register("IUserService",new UserService($container->Resolve("IUnitOfWork")));
         return $container;
         }

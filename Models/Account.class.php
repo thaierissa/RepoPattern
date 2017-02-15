@@ -2,7 +2,7 @@
 require_once("Name.class.php");
 class Account {
 
-    private $NetId,
+    protected $NetId,
             $Name,
             $Type;
 
