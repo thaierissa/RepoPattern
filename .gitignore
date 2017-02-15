@@ -1,4 +1,4 @@
 /vendor 
 /.vscode 
 composer.lock
-project.properties.php
+db.connection.properties.php
