@@ -1,8 +1,8 @@
 <?php
 interface IUserService {
-    public function GetUser($id);
-    public function AddUser(User $user);
-
+    function GetUser($id);
+    function AddUser(User $user);
+    function GetStudentsForAdvisor($id);
 }
 
 

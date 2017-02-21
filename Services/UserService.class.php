@@ -7,7 +7,6 @@ class UserService implements IUserService {
      * @var IUnitOfWork 
      */
     private $_UnitOfWork;
-
     public function __construct(IUnitOfWork $unitOfWork) {
         $this->_UnitOfWork = $unitOfWork;
     }
@@ -26,6 +25,4 @@ class UserService implements IUserService {
         if($user == null) throw new Exception("Invalid input");
     }
 }
-
-
 ?>
