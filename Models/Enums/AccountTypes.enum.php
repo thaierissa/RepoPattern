@@ -1,5 +1,6 @@
 <?php
-class AccountTypes {
+class AccountTypes
+{
     const __default = self::NULL;
     
     const NULL = 0,

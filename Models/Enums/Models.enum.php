@@ -1,5 +1,6 @@
 <?php
-class Models {
+class Models
+{
     const __default = self::NULL;
     
     const NULL = 0,

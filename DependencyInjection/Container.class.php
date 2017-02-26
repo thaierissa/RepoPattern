@@ -31,6 +31,7 @@ class Container
             throw new Exception("Existing key");
         }
         $this->container[$name] = $class;
+        return $this;
     }
     /**
      * Resolves an object from the container

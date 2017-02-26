@@ -8,7 +8,7 @@ class AuthorizationService implements IAuthorizationService
     private $_AuthenticationService;
     private $_SessionStore;
 
-    public function __construct(IAuthenticanService $authService, ISessionStore $sessionStore)
+    public function __construct(IAuthenticationService $authService, ISessionStore $sessionStore)
     {
         if (is_null($authService)) {
             throw new Exception("Invalid input $authService");

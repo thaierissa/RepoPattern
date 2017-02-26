@@ -1,6 +1,5 @@
 <?php
-interface IAuthenticationService {
-    function Authenticate($user,$pass);
+interface IAuthenticationService
+{
+    function Authenticate($user, $pass);
 }
-
-?>

@@ -1,7 +1,5 @@
 <?php
-interface IQuery {
+interface IQuery
+{
     function Find(PDO $pdo);
 }
-
-
-?>
