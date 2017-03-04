@@ -24,8 +24,9 @@ abstract class Repository implements IRepository
         return $obj->Find(self::$PDO);
     }
     
-    public function Create($obj)
+    public function Create($query)
     {
+        $PDO->exec($query);
     }
     public function Remove($obj)
     {

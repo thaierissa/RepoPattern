@@ -15,4 +15,10 @@ class Name
         $this->First = $firstName;
         $this->Last = $lastName;
     }
+    public function GetFirst() {
+        return $this->First;
+    }
+    public function GetLast() {
+        return $this->Last;
+    }
 }

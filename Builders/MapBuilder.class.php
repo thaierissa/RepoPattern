@@ -26,8 +26,10 @@ abstract class MapBuilder
         switch ($model) {
             case Models::Account:
                 $map =  new AccountMapper($statement);
+                break;
             case Models::Student:
                 $map = new StudentMapper($statement);
+                break;  
         }
         return !is_null($map) ? $map->Map() : null;
     }

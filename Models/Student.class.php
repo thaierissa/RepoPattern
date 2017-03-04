@@ -23,8 +23,4 @@ class Student extends Account
         $this->Year = (int) $year;
         $this->Transfer = $tranfer == "1";
     }
-    public function GetNetId()
-    {
-        return $this->NetId;
-    }
 }

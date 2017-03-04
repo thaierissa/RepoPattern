@@ -21,6 +21,6 @@ class DI
                          ->Register("IUserService", new UserService($container->Resolve("IUnitOfWork")))
                          ->Register("IAuthenticationService", new AuthenticationService("csmaster1.cs.local", "cs.local"))
                          ->Register("ISessionStore", new SessionStore())
-                         ->Register("IAuthorizationService", new AuthorizationService($container->Resolve("IAuthenticationService"), $container->Resolve("ISessionStore")));
+                         ->Register("IAuthorizationService", new AuthorizationService($container->Resolve("IAuthenticationService"), $container->Resolve("ISessionStore"),$container->Resolve("IUnitOfWork")));
     }
 }

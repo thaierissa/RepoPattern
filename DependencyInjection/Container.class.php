@@ -16,8 +16,8 @@ class Container
     /**
      * Registers an object to the container
      *
-     * @param string $name The key
-     * @param object $class The object
+     * @param String $name The key
+     * @param Object $class The object
      */
     public function Register($name, $class)
     {
@@ -36,7 +36,7 @@ class Container
     /**
      * Resolves an object from the container
      *
-     * @param string $name The key
+     * @param String $name The key
      */
     public function Resolve($name)
     {

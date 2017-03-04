@@ -15,8 +15,11 @@ class AccountRepository extends Repository implements IAccountRepository {
     public function GetAllAccounts() {
         return MapBuilder::Mapper(Models::Account,parent::$PDO->query("SELECT * FROM accounts"));
     }
-    public function getStudentsForAdvisor($id) {
+    public function GetStudentsForAdvisor($id) {
         return MapBuilder::Mapper(Models::Student,parent::Find(new GetStudentsForAdvisorQuery($id)));
+    }
+    public function CreateAccount(Account $account) {
+        parent::Create("INSERT INTO accounts (net_id,first_name,last_name,type) VALUES ('" . $account->GetNetId() . "','" . $account->GetName()->GetFirst() . "','" . $account->GetName()->GetLast() . "'," . $account->GetType() .  ")");
     }
 }
 

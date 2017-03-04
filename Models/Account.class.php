@@ -30,4 +30,12 @@ class Account
     {
         return $this->NetId;
     }
+        public function GetName()
+    {
+        return $this->Name;
+    }
+    public function GetType()
+    {
+        return $this->Type;
+    }
 }
